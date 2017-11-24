@@ -147,8 +147,8 @@ order by m.gateway, highest_league, mins asc, race
     Resque.redis.set('sq_should_nuke', 'YES')
 
     # preheat the cache by retrieving the URL
-    Curl.get('http://api.ggtracker.com/api/v1/econ_stats/staircase')
-    Curl.get('http://api.ggtracker.com/api/v1/spending_skill/am/p')
+    Curl.get('http://api.gggreplays.com/api/v1/econ_stats/staircase')
+    Curl.get('http://api.gggreplays.com/api/v1/spending_skill/am/p')
   end
 end
 

@@ -505,7 +505,7 @@ class ESDB::Match < Sequel::Model(:esdb_matches)
                 builder.team entity.team
                 builder.race ESDB::Sc2::SC2RANKS_RACE[entity.race]
               }
-              builder.url "http://ggtracker.com/matches/#{match.id}"
+              builder.url "http://gggreplays.com/matches/#{match.id}"
               builder.map match.map_name
               builder.version match.release_string
               builder.game_time match.duration_seconds

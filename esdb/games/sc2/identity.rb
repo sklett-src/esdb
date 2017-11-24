@@ -469,6 +469,7 @@ where ident.id = #{id}
     def sc2ranks_url
       return nil if gateway == 'xx'
       return nil if (!bnet_id || !sc2ranks_region)
+    # TODO SKLETT DANGEROUS gggreplays.com stuff
       "http://sc2ranks.com/api/base/teams/#{sc2ranks_region}/#{name}!#{bnet_id}?appKey=ggtracker.com"
     end
 
