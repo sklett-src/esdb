@@ -13,7 +13,7 @@ class Memcached
     # memcached correctly, or lingering dead connections.
     # TODO: may want to investigate rather than use this blunt approach.
     def reconnect!
-      server = ESDB.redis_config ? ESDB.redis_config['host'] : '127.0.0.1'
+      server = ESDB.redis_config ? ESDB.redis_config['host'] : 'localhost'
       ESDB.log("attempting to re-establish memcached connection to #{server}")
       memcached = Memcached::Rails.new(:servers => [server])
       Garner.config.cache = memcached

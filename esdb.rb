@@ -214,7 +214,7 @@ Resque::Plugins::Status::Hash.expire_in = (24 * 60 * 60) # 24hrs in seconds
 # instance with both memcached and redis running for the entire app.
 if ['production', 'staging'].include?(ESDB.env) || ENV['MEMCACHE']
   require 'memcached/rails'
-  memcached = Memcached::Rails.new(:servers => [redis_config ? redis_config['host'] : '127.0.0.1'])
+  memcached = Memcached::Rails.new(:servers => [redis_config ? redis_config['host'] : 'localhost'])
 
   # Test if it's running - we don't have it running on utility instances 
   # for example.

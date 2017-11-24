@@ -1,7 +1,7 @@
 default: &default
   adapter: mysql2
   username: root
-  host: 127.0.0.1
+  host: localhost
   password: 
   socket: /var/mysql/mysql.sock
   reconnect: true
